@@ -3,57 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEO ROBINHOOD TERMINAL</title>
+    <title>NEO ROBINHOOD // TERMINAL</title>
     <style>
         body {
             margin: 0;
-            background: #050507;
+            background: #0a0a0f;
             color: #00ff9f;
             font-family: 'Courier New', monospace;
             min-height: 100vh;
-            background-image: 
-                linear-gradient(#00ff9f 1px, transparent 1px),
-                linear-gradient(90deg, #00ff9f 1px, transparent 1px);
-            background-size: 50px 50px;
-            opacity: 0.9;
         }
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
         }
         h1 {
             font-size: 4.5rem;
             text-align: center;
-            margin-bottom: 10px;
+            margin: 0;
             text-shadow: 0 0 30px #00ff9f;
+            letter-spacing: 4px;
         }
         .subtitle {
             text-align: center;
             color: #ff00aa;
-            font-size: 1.5rem;
-            margin-bottom: 50px;
+            font-size: 1.4rem;
+            margin: 10px 0 60px;
         }
         .card {
-            background: rgba(10, 10, 20, 0.95);
+            background: rgba(15,15,30,0.9);
             border: 2px solid #00ff9f;
-            padding: 30px;
+            padding: 35px;
             margin-bottom: 30px;
-            border-radius: 12px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0,255,159,0.2);
+        }
+        input {
+            width: 100%;
+            background: #000;
+            border: 2px solid #00ff9f;
+            color: #00ff9f;
+            padding: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            border-radius: 10px;
         }
         button {
-            background: #ff00aa;
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            font-size: 1.3rem;
-            cursor: pointer;
             width: 100%;
-            border-radius: 8px;
+            padding: 22px;
+            background: linear-gradient(90deg, #ff00aa, #00ffff);
+            color: black;
+            font-weight: bold;
+            font-size: 1.4rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
         }
         button:hover {
-            background: #00ff9f;
-            color: black;
+            transform: scale(1.02);
         }
     </style>
 </head>
@@ -63,28 +70,28 @@
         <p class="subtitle">CYBERPUNK TERMINAL // ONLINE</p>
 
         <div class="card">
-            <h2 style="color:#00ffff; margin-bottom:15px;">TOTAL PORTFOLIO VALUE</h2>
-            <div style="font-size: 3.5rem; font-weight: bold;">$142,840</div>
-            <div style="color:#00ff9f; font-size:1.5rem;">+18.4% THIS CYCLE</div>
+            <h2 style="color:#00ffff; margin-bottom:10px;">TOTAL PORTFOLIO VALUE</h2>
+            <div style="font-size: 3.8rem; font-weight: bold;">$142,840</div>
+            <div style="color:#00ff9f; font-size:1.6rem;">+18.4% THIS CYCLE</div>
         </div>
 
         <div class="card">
             <h2 style="color:#ff00aa; margin-bottom:15px;">COMMAND CONSOLE</h2>
-            <input id="cmd" type="text" style="width:100%; background:#000; border:2px solid #00ff9f; color:#00ff9f; padding:20px; font-size:1.2rem; margin-bottom:15px;" placeholder="buy $1000 NVDA on robinhood">
-            <button onclick="sendCommand()">TRANSMIT TO GRID</button>
+            <input id="cmd" type="text" placeholder="buy $1000 NVDA on robinhood">
+            <button onclick="send()">TRANSMIT TO THE GRID</button>
         </div>
 
-        <div style="text-align:center; color:#ffffff50; margin-top:40px;">
-            OPERATOR @0xmatdis • CONNECTED TO ROBINHOOD CHAIN
+        <div style="text-align:center; color:#ffffff40; margin-top:50px; font-size:0.9rem;">
+            OPERATOR @0xmatdis • ROBINHOOD CHAIN SYNCED
         </div>
     </div>
 
     <script>
-        function sendCommand() {
-            const cmd = document.getElementById('cmd').value;
-            if (cmd) {
-                alert("⚡ COMMAND SENT TO BANKRBOT:\n\n" + cmd);
-                document.getElementById('cmd').value = '';
+        function send() {
+            const input = document.getElementById('cmd');
+            if (input.value) {
+                alert("⚡ COMMAND TRANSMITTED SUCCESSFULLY!\n\n" + input.value);
+                input.value = '';
             }
         }
     </script>
