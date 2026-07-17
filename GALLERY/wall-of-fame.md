@@ -1,15 +1,12 @@
-# Wall of Fame
+# WALL OF FAME
 
-This page showcases tokenized agents launched on Robinhood Chain.
+Tokenized Agents on Robinhood Chain
 
 ## Featured Agents
 
-| Agent Name       | Token     | Status   | Description                     |
-|------------------|-----------|----------|---------------------------------|
-| Example Agent    | $NEON     | LIVE     | First cyberpunk agent           |
-| Your Agent Here  | $YOUR     | PENDING  | Add your agent                  |
+| Agent          | Token     | Market Cap | Status   |
+|----------------|-----------|------------|----------|
+| Neon Agent     | $NEON     | $420K      | LIVE     |
+| Your Agent     | $YOUR     | -          | PENDING  |
 
-## How to Add Your Agent
-1. Launch token via Bankrbot
-2. Submit Pull Request with your details
-3. Get featured on the neon wall
+Add your agent by opening a Pull Request.
